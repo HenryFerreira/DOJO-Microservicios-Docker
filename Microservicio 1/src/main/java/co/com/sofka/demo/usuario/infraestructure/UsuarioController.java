@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:8080")
 @RestController
 public class UsuarioController {
     @Autowired
     private UsuarioService service;
 
-    @GetMapping(value = "/cliente")
+    @GetMapping(value = "/usuario")
     private Flux<Usuario> findAll() {
         return this.service.findAll();
     }
