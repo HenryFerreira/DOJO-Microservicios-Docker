@@ -8,24 +8,24 @@ import java.util.UUID;
 @Document(collation = "usuarios")
 public class Usuario {
     @Id
-    private String clienteID = UUID.randomUUID().toString().substring(0, 10);
+    private String id = UUID.randomUUID().toString().substring(0, 10);
     private String nombre;
     private String celular;
     private String documentoIdentidad;
 
-    public Usuario(String clienteID, String nombre, String celular, String documentoIdentidad) {
-        this.clienteID = clienteID;
+    public Usuario(String id, String nombre, String celular, String documentoIdentidad) {
+        this.id = id;
         this.nombre = nombre;
         this.celular = celular;
         this.documentoIdentidad = documentoIdentidad;
     }
 
-    public String getClienteID() {
-        return clienteID;
+    public String getId() {
+        return id;
     }
 
-    public void setClienteID(String clienteID) {
-        this.clienteID = clienteID;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNombre() {
