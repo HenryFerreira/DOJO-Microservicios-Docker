@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.UUID;
 
-@Document(collation = "usuarios")
+@Document("usuarios")
 public class Usuario {
     @Id
     private String id = UUID.randomUUID().toString().substring(0, 10);
@@ -50,5 +50,15 @@ public class Usuario {
 
     public void setDocumentoIdentidad(String documentoIdentidad) {
         this.documentoIdentidad = documentoIdentidad;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id='" + id + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", celular='" + celular + '\'' +
+                ", documentoIdentidad='" + documentoIdentidad + '\'' +
+                '}';
     }
 }
