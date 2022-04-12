@@ -13,11 +13,6 @@ public class UsuarioServiceImpl implements UsuarioService{
     private UsuarioRepository repository;
 
     @Override
-    public Flux<Usuario> findAll() {
-        return this.repository.findAll();
-    }
-
-    @Override
     public Mono<Usuario> crearUsuario(Usuario usuario) {
         return this.repository.save(usuario);
     }

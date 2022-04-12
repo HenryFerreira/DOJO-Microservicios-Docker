@@ -21,9 +21,5 @@ public class UsuarioController {
         return this.service.crearUsuario(usuario);
     }
 
-    @GetMapping(value = "/cliente")
-    private Flux<Usuario> findAll() {
-        return this.service.findAll();
-    }
 
 }
